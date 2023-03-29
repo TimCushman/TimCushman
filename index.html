@@ -1,0 +1,31 @@
+<!--This code was written with help from A video: https://www.youtube.com/watch?v=UiA4X60Qe1E, and three websites: 
+    https://www.dofactory.com/html/button/id#:~:text=The%20id%20attribute%20assigns%20an,applied%20to%20any%20HTML%20element.
+    https://www.w3schools.com/js/js_random.asp
+    https://www.w3schools.com/howto/howto_js_get_current_window.asp#:~:text=Use%20window.innerWidth%20and%20window,screen%20size%20of%20a%20page.
+-->
+<html>
+    <head>
+        <title>Cure Your Boredom</title>
+        <style>
+            .button {
+                position: absolute;
+                left: 80px;
+                top: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <button id="moveButton" class="button" onclick="moveButton()">Click Here to Cure Your Boredom</button>
+
+        <script>
+            let moveButton = () => {
+                var button = document.getElementById("moveButton");
+                var x = Math.random() * window.innerHeight;
+                var y = Math.random() * window.innerWidth;
+                button.style.top = `${x}px`;
+                button.style.left = `${y}px`;
+            }
+        </script>
+    </body>
+</html>
